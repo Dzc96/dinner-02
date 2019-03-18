@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.DinnerCommentMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.DinnerComment" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="comment_id" property="commentId" jdbcType="INTEGER" />
+    <result column="dinner_id" property="dinnerId" jdbcType="INTEGER" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="create_by" property="createBy" jdbcType="INTEGER" />
+    <result column="create_dte" property="createDte" jdbcType="TIMESTAMP" />
+    <result column="is_verify" property="isVerify" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

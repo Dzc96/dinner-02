@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.ShopMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.Shop" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="place" property="place" jdbcType="VARCHAR" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="avg_consume" property="avgConsume" jdbcType="DOUBLE" />
+    <result column="praise" property="praise" jdbcType="INTEGER" />
+    <result column="popularity" property="popularity" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

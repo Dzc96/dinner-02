@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.UserCreditMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.UserCredit" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="credit_id" property="creditId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="success_count" property="successCount" jdbcType="INTEGER" />
+    <result column="break_count" property="breakCount" jdbcType="INTEGER" />
+    <result column="report_count" property="reportCount" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

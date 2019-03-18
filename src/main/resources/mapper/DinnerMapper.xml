@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.DinnerMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.Dinner" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="dinner_id" property="dinnerId" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="from_dte" property="fromDte" jdbcType="DATE" />
+    <result column="end_dte" property="endDte" jdbcType="DATE" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="member" property="member" jdbcType="INTEGER" />
+    <result column="avg_consume" property="avgConsume" jdbcType="DOUBLE" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="stat_cde" property="statCde" jdbcType="VARCHAR" />
+    <result column="create_by" property="createBy" jdbcType="INTEGER" />
+    <result column="create_dte" property="createDte" jdbcType="TIMESTAMP" />
+    <result column="last_mod_dte" property="lastModDte" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

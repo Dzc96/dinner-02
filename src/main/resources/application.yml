@@ -1,0 +1,55 @@
+server:
+  port: 8090
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mapper/*.xml
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.7.3.36:3306/dinner?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: css_pos
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  redis:
+    database: 9
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 20
+        min-idle: 0
+  cache:
+    type: redis
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+accessKeyId: LTAINxGfOwWl5mMu
+accessKeySecret: 4D2jC4bBAmNdK8lk91JxpfmrdxuuZM
+signName: 李雄边
+templateCode: SMS_155856022
+
+sysImg: https://lixiongbian.oss-cn-shenzhen.aliyuncs.com/2018-06-29/%E5%8C%96%E5%A6%86%E5%8C%85.png
+
+jwt:
+  secret: fanpinpin  #jwt签名
+  expire: 604800     #jwt过期时间，7天
+  header: token      #jwt前缀

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.DinnerUserMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.DinnerUser" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dinner_id" property="dinnerId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="is_join" property="isJoin" jdbcType="VARCHAR" />
+    <result column="is_commit_margin" property="isCommitMargin" jdbcType="VARCHAR" />
+    <result column="join_dte" property="joinDte" jdbcType="TIMESTAMP" />
+    <result column="out_dte" property="outDte" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>
