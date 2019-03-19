@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.appointment.dinner.mapper.ChatMsgMapper" >
-  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.ChatMsg" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.appointment.dinner.mapper.ChatMsgMapper">
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.ChatMsg">
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="msg_id" property="msgId" jdbcType="INTEGER" />
-    <result column="msg" property="msg" jdbcType="VARCHAR" />
-    <result column="create_by" property="createBy" jdbcType="INTEGER" />
-    <result column="create_dte" property="createDte" jdbcType="TIMESTAMP" />
+    <id column="msg_id" jdbcType="INTEGER" property="msgId" />
+    <result column="msg" jdbcType="VARCHAR" property="msg" />
+    <result column="create_by" jdbcType="INTEGER" property="createBy" />
+    <result column="create_dte" jdbcType="TIMESTAMP" property="createDte" />
   </resultMap>
+
 </mapper>
