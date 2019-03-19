@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.appointment.dinner.mapper.DinnerOrderMapper">
-  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.DinnerOrder">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appointment.dinner.mapper.DinnerOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.appointment.dinner.model.DinnerOrder" >
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="order_id" jdbcType="INTEGER" property="orderId" />
-    <result column="dinner_id" jdbcType="INTEGER" property="dinnerId" />
-    <result column="qr_cde" jdbcType="VARCHAR" property="qrCde" />
-    <result column="create_dte" jdbcType="TIMESTAMP" property="createDte" />
+    <id column="order_id" property="orderId" jdbcType="INTEGER" />
+    <result column="dinner_id" property="dinnerId" jdbcType="INTEGER" />
+    <result column="qr_cde" property="qrCde" jdbcType="VARCHAR" />
+    <result column="create_dte" property="createDte" jdbcType="TIMESTAMP" />
   </resultMap>
-
 </mapper>

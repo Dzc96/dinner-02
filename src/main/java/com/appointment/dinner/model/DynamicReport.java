@@ -35,6 +35,11 @@ public class DynamicReport {
     @Column(name = "is_verify")
     private String isVerify;
 
+    private String location;
+
+    @Column(name = "long_and_lat")
+    private String longAndLat;
+
     /**
      * 获取动态举报自增id
      *
@@ -123,5 +128,60 @@ public class DynamicReport {
      */
     public void setIsVerify(String isVerify) {
         this.isVerify = isVerify == null ? null : isVerify.trim();
+    }
+
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * @param location
+     */
+    public void setLocation(String location) {
+        this.location = location == null ? null : location.trim();
+    }
+
+    /**
+     * @return long_and_lat
+     */
+    public String getLongAndLat() {
+        return longAndLat;
+    }
+
+    /**
+     * @param longAndLat
+     */
+    public void setLongAndLat(String longAndLat) {
+        this.longAndLat = longAndLat == null ? null : longAndLat.trim();
+    }
+
+    public DynamicReport(Integer reportId, Integer dynamicId, String reason, Date createDte, String isVerify, String location, String longAndLat) {
+        this.reportId = reportId;
+        this.dynamicId = dynamicId;
+        this.reason = reason;
+        this.createDte = createDte;
+        this.isVerify = isVerify;
+        this.location = location;
+        this.longAndLat = longAndLat;
+    }
+
+    public DynamicReport() {
+    }
+
+
+    @Override
+    public String toString() {
+        return "DynamicReport{" +
+                "reportId=" + reportId +
+                ", dynamicId=" + dynamicId +
+                ", reason='" + reason + '\'' +
+                ", createDte=" + createDte +
+                ", isVerify='" + isVerify + '\'' +
+                ", location='" + location + '\'' +
+                ", longAndLat='" + longAndLat + '\'' +
+                '}';
     }
 }

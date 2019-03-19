@@ -1,20 +1,15 @@
 package com.appointment.dinner.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "chat_msg")
-@ApiModel("聊天室消息实体类")
 public class ChatMsg {
     /**
      * 聊天室消息自增id
      */
     @Id
     @Column(name = "msg_id")
-    @ApiModelProperty(name = "消息id",dataType = "int",example = "1")
     private Integer msgId;
 
     /**

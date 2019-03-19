@@ -14,7 +14,7 @@ public class Dynamic {
     /**
      * 动态内容
      */
-    private String desc;
+    private String content;
 
     /**
      * 创建人id外键
@@ -28,12 +28,6 @@ public class Dynamic {
     @Column(name = "create_dte")
     private Date createDte;
 
-    /**
-     * 是否审核通过，0-否，1-是
-     */
-    @Column(name = "is_verify")
-    private String isVerify;
-
     @Column(name = "img_url")
     private String imgUrl;
 
@@ -42,6 +36,11 @@ public class Dynamic {
 
     @Column(name = "topic_id")
     private Integer topicId;
+
+    private String location;
+
+    @Column(name = "l_and_lat")
+    private String lAndLat;
 
     /**
      * 获取广场动态自增id
@@ -64,19 +63,19 @@ public class Dynamic {
     /**
      * 获取动态内容
      *
-     * @return desc - 动态内容
+     * @return content - 动态内容
      */
-    public String getDesc() {
-        return desc;
+    public String getContent() {
+        return content;
     }
 
     /**
      * 设置动态内容
      *
-     * @param desc 动态内容
+     * @param content 动态内容
      */
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
     }
 
     /**
@@ -113,24 +112,6 @@ public class Dynamic {
      */
     public void setCreateDte(Date createDte) {
         this.createDte = createDte;
-    }
-
-    /**
-     * 获取是否审核通过，0-否，1-是
-     *
-     * @return is_verify - 是否审核通过，0-否，1-是
-     */
-    public String getIsVerify() {
-        return isVerify;
-    }
-
-    /**
-     * 设置是否审核通过，0-否，1-是
-     *
-     * @param isVerify 是否审核通过，0-否，1-是
-     */
-    public void setIsVerify(String isVerify) {
-        this.isVerify = isVerify == null ? null : isVerify.trim();
     }
 
     /**
@@ -173,5 +154,48 @@ public class Dynamic {
      */
     public void setTopicId(Integer topicId) {
         this.topicId = topicId;
+    }
+
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * @param location
+     */
+    public void setLocation(String location) {
+        this.location = location == null ? null : location.trim();
+    }
+
+    /**
+     * @return l_and_lat
+     */
+    public String getlAndLat() {
+        return lAndLat;
+    }
+
+    /**
+     * @param lAndLat
+     */
+    public void setlAndLat(String lAndLat) {
+        this.lAndLat = lAndLat == null ? null : lAndLat.trim();
+    }
+
+    public Dynamic(Integer dynamicId, String content, Integer createBy, Date createDte, String imgUrl, String videoUrl, Integer topicId, String location, String lAndLat) {
+        this.dynamicId = dynamicId;
+        this.content = content;
+        this.createBy = createBy;
+        this.createDte = createDte;
+        this.imgUrl = imgUrl;
+        this.videoUrl = videoUrl;
+        this.topicId = topicId;
+        this.location = location;
+        this.lAndLat = lAndLat;
+    }
+
+    public Dynamic() {
     }
 }

@@ -28,7 +28,7 @@ public class DynamicServiceImpl implements DynamicService {
 
     @Override
     public void updateDynamic(Dynamic dynamic) {
-        dynamicMapper.updateByPrimaryKey(dynamic);
+        dynamicMapper.updateByPrimaryKeySelective(dynamic);
     }
 
     @Override

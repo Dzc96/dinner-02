@@ -44,7 +44,7 @@ public class DynamicReportController {
                 DynamicReport dynamicReport = dynamicReportService.getDynamicReport(reportId);
                 dynamicReport.setIsVerify("1");
                 dynamicReportService.reviewReport(dynamicReport);
-                //举报次数达到一定次数就封号处理，该功能暂时待定，对应的表是user_credit
+                //举报次数达到一定次数就封号处理，该功能暂时待定，对应的表是dynamic_report，根据dynamic_id做查询就能知道被举报了多少次
                 return new R<>("审核成功");
             }
         } catch (Exception e) {

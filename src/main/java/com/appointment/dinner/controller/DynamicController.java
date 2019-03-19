@@ -20,6 +20,13 @@ public class DynamicController {
     @Autowired
     private DynamicService dynamicService;
 
+
+    /**
+     * 1.没有对图片、视频做处理，应该保存到服务器某个路径下，把这个路径保存到URL
+     * 2.要把动态和topic进行关联，涉及到dynamic表和topic表
+     * @param dynamic
+     * @return
+     */
     @PostMapping("/")
     @ApiOperation("发布动态")
     public R<String> insertDynamic(Dynamic dynamic) {
@@ -37,7 +44,6 @@ public class DynamicController {
         return new R<>(new LogicalVerificationException("发布动态失败"));
     }
 
-
     @PostMapping("/{dynamicId}")
     @ApiOperation("删除动态")
     public R<String> deleteDynamic(@PathVariable("dynamicId") Integer dynamicId) {
@@ -51,7 +57,6 @@ public class DynamicController {
         }
         return new R<>(new LogicalVerificationException("删除动态失败"));
     }
-
 
 
     @GetMapping("/{dynamicId}")
